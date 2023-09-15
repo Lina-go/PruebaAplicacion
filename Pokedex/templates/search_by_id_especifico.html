@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buscar Pokémon por ID ESPECIFICO</title>
+</head>
+<body>
+    <h1>Buscar Pokémon por ID ESPECIFICO</h1>
+    <form method="POST" action="/buscar_id_especifico">
+        <label for="id">Número de Pokédex:</label>
+        <input type="number" name="id" id="id" required>
+        <button type="submit">Buscar</button>
+    </form>
+
+    <!-- Display the JSON data here -->
+    {% if detalles %}
+    <h2>Información del Pokémon</h2>
+    <p>Nombre: {{ detalles.nombre }}</p>
+    <p>Habilidades: {{ detalles.habilidades|join(', ') }}</p>
+    <p>Número de Pokédex: {{ detalles.numero_pokedex }}</p>
+    <p>Tipo: {{ detalles.tipo }}</p>
+    <p>Sprites:{{ detalles.sprites }} </p>
+    {% endif %}
+</body>
+</html>

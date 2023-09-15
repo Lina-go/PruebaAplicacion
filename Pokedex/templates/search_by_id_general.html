@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buscar Pokémon por ID GENERAL</title>
+</head>
+<body>
+    <h1>Buscar Pokémon por ID GENERAL</h1>
+    <form method="POST" action="/buscar_id_general">
+        <label for="id">Número de Pokédex:</label>
+        <input type="number" name="id" id="id" required>
+        <button type="submit">Buscar</button>
+    </form>
+
+    
+    {% if detalles %}
+    <h2>Información del Pokémon</h2>
+    <p>Nombre: {{ detalles.nombre }}</p>
+    <p>Recurso de Datos: {{detalles.recurso}}</p>
+    {% endif %}
+
+</body>
+</html>

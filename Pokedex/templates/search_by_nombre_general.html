@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buscar Pokémon por NOMBRE GENERAL</title>
+</head>
+<body>
+    <h1>Buscar Pokémon por NOMBRE GENERAL</h1>
+    <form method="POST" action="/buscar_nombre_general"> <!-- Change action route to /buscar_nombre_especifico -->
+        <label for="nombre">Nombre del Pokémon:</label>
+        <input type="text" name="nombre" id="nombre" required> <!-- Use text input for Pokémon name -->
+        <button type="submit">Buscar</button>
+    </form>
+
+
+    
+    {% if detalles %}
+    <h2>Información del Pokémon</h2>
+    <p>Nombre: {{ detalles.nombre }}</p>
+    <p>Recurso de Datos: {{detalles.recurso}}</p>
+    {% endif %}
+</body>
+</html>
